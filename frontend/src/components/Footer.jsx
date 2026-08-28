@@ -6,6 +6,8 @@ import socialInstagram from "../assets/images/social-instagram.png";
 import socialFacebook from "../assets/images/social-facebook.png";
 import socialYoutube from "../assets/images/social-youtube.png";
 import socialQuora from "../assets/images/social-quora.png";
+import ChatBot from "./ChatBot";
+import { useState } from "react";
 
 const QUICK_LINKS = [
   "Home",
@@ -81,6 +83,8 @@ function FooterList({ items }) {
 }
 
 export default function Footer() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <footer className="bg-white pt-14 pb-10">
       <div className="mx-auto max-w-[1366px] px-4 md:px-8">
@@ -168,24 +172,30 @@ export default function Footer() {
                 className="absolute inset-y-0 right-0 h-full w-auto object-cover opacity-90 transition group-hover:opacity-100"
               />
             </a>
-            <a
-              href="#"
-              className="group relative flex h-32 items-center overflow-hidden rounded-2xl bg-[#3CB54A] px-5"
+            <button
+              type="button"
+              onClick={() => setIsChatOpen(true)}
+              className="group relative flex h-32 w-full items-center overflow-hidden rounded-2xl bg-[#3CB54A] px-5 text-left"
             >
               <span className="font-display relative z-10 text-3xl font-semibold text-white">
                 Hi
               </span>
+
               <img
                 src={chatBg}
                 alt="Chat with Arcot Manimark support on WhatsApp"
                 className="absolute inset-y-0 right-0 h-full w-auto object-cover"
               />
+
               <img
                 src={whatsappIcon}
                 alt=""
                 className="absolute bottom-4 left-14 h-6 w-6 object-contain"
               />
-            </a>
+            </button>
+
+            {/* Chatbot */}
+            <ChatBot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
           </div>
         </div>
       </div>
