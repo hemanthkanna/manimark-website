@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
 import ebrochPhoto from "../assets/images/ebroch-photo.png";
 import chatBg from "../assets/images/chat-bg.png";
 import whatsappIcon from "../assets/images/whatsapp-icon.png";
@@ -6,18 +9,26 @@ import socialInstagram from "../assets/images/social-instagram.png";
 import socialFacebook from "../assets/images/social-facebook.png";
 import socialYoutube from "../assets/images/social-youtube.png";
 import socialQuora from "../assets/images/social-quora.png";
-import ChatBot from "./ChatBot";
-import { useState } from "react";
 
+import ChatBot from "./ChatBot";
+
+// Every routable item below goes to the Coming Soon page,
+// except Home.
 const QUICK_LINKS = [
-  "Home",
-  "Products",
-  "About Us",
-  "Find a Store",
-  "Contact Us",
+  { label: "Home", to: "/" },
+  { label: "Products", to: "/coming-soon" },
+  { label: "About Us", to: "/coming-soon" },
+  { label: "Find a Store", to: "/coming-soon" },
+  { label: "Contact Us", to: "/coming-soon" },
 ];
+
 const POLICIES = ["Privacy Policy", "Cookies Policy", "Terms and Condition"];
-const WHATS_NEW = ["Deals", "New Arrivals"];
+
+const WHATS_NEW = ["Deals", "New Arrivals"].map((label) => ({
+  label,
+  to: "/coming-soon",
+}));
+
 const BROWSE_CATEGORIES = [
   "Burfi",
   "Balls",
@@ -26,7 +37,11 @@ const BROWSE_CATEGORIES = [
   "Premium Products",
   "Gift Boxes",
   "Oils",
-];
+].map((label) => ({
+  label,
+  to: "/coming-soon",
+}));
+
 const POPULAR_PRODUCTS = [
   "Peanut Burfi",
   "Fine Peanut Burfi",
@@ -35,7 +50,10 @@ const POPULAR_PRODUCTS = [
   "Sesame Balls",
   "Energy Laddu",
   "Masala Peanut",
-];
+].map((label) => ({
+  label,
+  to: "/coming-soon",
+}));
 
 const SOCIALS = [
   {
@@ -58,20 +76,45 @@ const SOCIALS = [
     label: "YouTube",
     link: "https://www.youtube.com/channel/UC3h-J8j4uvtQGJd_Lz8lxOw",
   },
-  { src: socialQuora, label: "Quora", link: "https://www.quora.com" },
+  {
+    src: socialQuora,
+    label: "Quora",
+    link: "https://www.quora.com",
+  },
 ];
 
 function FooterHeading({ children }) {
   return <h4 className="font-semibold text-neutral-900">{children}</h4>;
 }
 
+// For routable items: [{ label, to }]
 function FooterList({ items }) {
+  return (
+    <ul className="mt-3 space-y-2">
+      {items.map(({ label, to }) => (
+        <li key={label}>
+          <Link
+            to={to}
+            state={to === "/coming-soon" ? { navLabel: label } : undefined}
+            className="text-brand-gray transition hover:text-brand-magenta"
+          >
+            {label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+// For placeholder items with no destination yet.
+function FooterPlainList({ items }) {
   return (
     <ul className="mt-3 space-y-2">
       {items.map((item) => (
         <li key={item}>
           <a
             href="#"
+            onClick={(e) => e.preventDefault()}
             className="text-brand-gray transition hover:text-brand-magenta"
           >
             {item}
@@ -94,6 +137,7 @@ export default function Footer() {
             <p className="font-semibold text-neutral-900">
               Arcot Manimark Foods PVT. LTD.
             </p>
+
             <p className="mt-2 leading-relaxed text-brand-gray">
               S.F,No:870/5, Narayanapuram Village,
               <br />
@@ -103,11 +147,13 @@ export default function Footer() {
               <br />
               Ranipet, Tamil Nadu - 632507
             </p>
+
             <p className="mt-4 leading-relaxed text-brand-gray">
               7904490146 / 7904490633
               <br />
               customercare@manimark.com
             </p>
+
             <p className="mt-4 leading-relaxed text-brand-gray">
               © 2026 Arcot Manimark Foods |
               <br />
@@ -115,6 +161,8 @@ export default function Footer() {
               <br />
               Website Design by Regin Designs
             </p>
+
+            {/* Social links */}
             <div className="mt-5 flex items-center gap-3">
               {SOCIALS.map(({ src, label, link }) => (
                 <a
@@ -134,17 +182,21 @@ export default function Footer() {
           {/* Quick Links + Policies */}
           <div>
             <FooterHeading>Quick Links</FooterHeading>
+
             <FooterList items={QUICK_LINKS} />
+
             <div className="mt-6">
               <FooterHeading>Policies</FooterHeading>
-              <FooterList items={POLICIES} />
+              <FooterPlainList items={POLICIES} />
             </div>
           </div>
 
           {/* What's New + Browse Categories */}
           <div>
             <FooterHeading>What&apos;s New</FooterHeading>
+
             <FooterList items={WHATS_NEW} />
+
             <div className="mt-6">
               <FooterHeading>Browse Categories</FooterHeading>
               <FooterList items={BROWSE_CATEGORIES} />
@@ -159,23 +211,30 @@ export default function Footer() {
 
           {/* Promo cards */}
           <div className="col-span-2 flex flex-col gap-4 sm:col-span-2 lg:col-span-1 lg:max-w-xs">
+            {/* E-Brochure */}
             <a
               href="#"
+              onClick={(e) => e.preventDefault()}
               className="group relative flex h-32 items-center overflow-hidden rounded-2xl bg-brand-magenta px-5"
+              aria-label="Download the Arcot Manimark e-brochure"
             >
-              <span className="font-display relative z-10 text-2xl font-semibold text-white uppercase">
+              <span className="font-display relative z-10 text-2xl font-semibold uppercase text-white">
                 E-Broch
               </span>
+
               <img
                 src={ebrochPhoto}
                 alt="Download the Arcot Manimark e-brochure"
                 className="absolute inset-y-0 right-0 h-full w-auto object-cover opacity-90 transition group-hover:opacity-100"
               />
             </a>
+
+            {/* WhatsApp / Chat */}
             <button
               type="button"
               onClick={() => setIsChatOpen(true)}
               className="group relative flex h-32 w-full items-center overflow-hidden rounded-2xl bg-[#3CB54A] px-5 text-left"
+              aria-label="Chat with Arcot Manimark support"
             >
               <span className="font-display relative z-10 text-3xl font-semibold text-white">
                 Hi
@@ -183,7 +242,7 @@ export default function Footer() {
 
               <img
                 src={chatBg}
-                alt="Chat with Arcot Manimark support on WhatsApp"
+                alt=""
                 className="absolute inset-y-0 right-0 h-full w-auto object-cover"
               />
 

@@ -1,55 +1,74 @@
-import { useState } from 'react'
-import logo from '../assets/images/logo.png'
-import searchIcon from '../assets/images/icon-search.png'
-import userIcon from '../assets/images/icon-user.png'
-import cartIcon from '../assets/images/icon-cart.png'
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/images/logo.png";
+import searchIcon from "../assets/images/icon-search.png";
+import userIcon from "../assets/images/icon-user.png";
+import cartIcon from "../assets/images/icon-cart.png";
 
 const NAV_LINKS = [
-  'Home',
-  'Products',
-  'About Us',
-  'Find a Store',
-  'Gifts',
-  'Business',
-  'Career',
-  'Contact Us',
-]
+  { label: "Home", to: "/" },
+  { label: "Products", to: "/coming-soon" },
+  { label: "About Us", to: "/coming-soon" },
+  { label: "Find a Store", to: "/coming-soon" },
+  { label: "Gifts", to: "/coming-soon" },
+  { label: "Business", to: "/coming-soon" },
+  { label: "Career", to: "/coming-soon" },
+  { label: "Contact Us", to: "/coming-soon" },
+];
 
 export default function Header() {
-  const [active, setActive] = useState('Home')
-  const [menuOpen, setMenuOpen] = useState(false)
-  const cartCount = 23
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const cartCount = 23;
+
+  // Multiple nav items route to the same "/coming-soon" page, so the
+  // clicked label rides along in navigation state to know which one to
+  // highlight there. On "/" it's always "Home".
+  const activeLabel =
+    location.pathname === "/" ? "Home" : (location.state?.navLabel ?? null);
+
+  const renderLinks = (onNavigate) =>
+    NAV_LINKS.map(({ label, to }) => (
+      <li key={label}>
+        <Link
+          to={to}
+          state={to === "/coming-soon" ? { navLabel: label } : undefined}
+          onClick={onNavigate}
+          className={
+            "block rounded-full px-4 py-2.5 transition-colors " +
+            (activeLabel === label
+              ? "bg-brand-yellow text-neutral-900"
+              : "text-neutral-800 hover:bg-neutral-100")
+          }
+        >
+          {label}
+        </Link>
+      </li>
+    ));
 
   return (
     <header className="bg-white">
       <div className="mx-auto flex max-w-[1366px] items-center justify-between gap-4 px-4 py-4 md:px-8">
         {/* Logo */}
-        <a href="#home" className="flex shrink-0 items-center" aria-label="Arcot Manimark home">
-          <img src={logo} alt="Arcot Manimark" className="h-16 w-16 md:h-[70px] md:w-[70px]" />
-        </a>
+        <Link
+          to="/"
+          className="flex shrink-0 items-center"
+          aria-label="Arcot Manimark home"
+        >
+          <img
+            src={logo}
+            alt="Arcot Manimark"
+            className="h-16 w-16 md:h-[70px] md:w-[70px]"
+          />
+        </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden flex-1 justify-center lg:flex" aria-label="Primary">
+        <nav
+          className="hidden flex-1 justify-center lg:flex"
+          aria-label="Primary"
+        >
           <ul className="flex items-center gap-1 text-[15px] font-semibold text-neutral-900">
-            {NAV_LINKS.map((label) => (
-              <li key={label}>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    setActive(label)
-                  }}
-                  className={
-                    'block rounded-full px-4 py-2.5 transition-colors ' +
-                    (active === label
-                      ? 'bg-brand-yellow text-neutral-900'
-                      : 'text-neutral-800 hover:bg-neutral-100')
-                  }
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
+            {renderLinks()}
           </ul>
         </nav>
 
@@ -100,31 +119,15 @@ export default function Header() {
 
       {/* Mobile nav */}
       {menuOpen && (
-        <nav aria-label="Primary mobile" className="border-t border-neutral-100 lg:hidden">
+        <nav
+          aria-label="Primary mobile"
+          className="border-t border-neutral-100 lg:hidden"
+        >
           <ul className="flex flex-col gap-1 px-4 py-3 text-[15px] font-semibold text-neutral-900">
-            {NAV_LINKS.map((label) => (
-              <li key={label}>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    setActive(label)
-                    setMenuOpen(false)
-                  }}
-                  className={
-                    'block rounded-full px-4 py-2.5 transition-colors ' +
-                    (active === label
-                      ? 'bg-brand-yellow text-neutral-900'
-                      : 'text-neutral-800 hover:bg-neutral-100')
-                  }
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
+            {renderLinks(() => setMenuOpen(false))}
           </ul>
         </nav>
       )}
     </header>
-  )
+  );
 }

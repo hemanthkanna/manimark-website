@@ -1,19 +1,18 @@
-import TopBar from './components/TopBar'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import PromoGrid from './components/PromoGrid'
-import Footer from './components/Footer'
+import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import Home from "./pages/Home";
+import ComingSoon from "./pages/ComingSoon";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white">
-      <TopBar />
-      <Header />
-      <main>
-        <Hero />
-        <PromoGrid />
-      </main>
-      <Footer />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
+        {/* Any unmatched route also lands on Coming Soon rather than a blank 404 */}
+        <Route path="*" element={<ComingSoon />} />
+      </Routes>
     </div>
-  )
+  );
 }
