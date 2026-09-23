@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import TopBar from "../components/TopBar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { Link } from 'react-router-dom'
+import TopBar from '../components/TopBar'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function ComingSoon() {
   return (
@@ -35,8 +35,8 @@ export default function ComingSoon() {
                 Coming Soon
               </h1>
               <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/85 sm:text-base">
-                We&apos;re cooking up something delicious. This page isn&apos;t
-                ready just yet — check back soon!
+                We&apos;re cooking up something delicious. This page isn&apos;t ready
+                just yet — check back soon!
               </p>
               <Link
                 to="/"
@@ -50,5 +50,5 @@ export default function ComingSoon() {
       </main>
       <Footer />
     </>
-  );
+  )
 }
