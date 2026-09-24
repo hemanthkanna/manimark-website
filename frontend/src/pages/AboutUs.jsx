@@ -4,6 +4,40 @@ import Footer from "../components/Footer";
 import BigBrandHeading from "../components/BigBrandHeading";
 import { heroIntro, timeline, pillars, closing } from "../data/about";
 import StatsCounter from "../components/StatsCounter";
+import Testimonials from "../components/Testimonials";
+
+import testimonialUser from "../assets/images/icon-user.png";
+import PartnerLogos from "../components/PartnerLogos";
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Priya Sharma",
+    designation: "Happy Customer",
+    review:
+      "I've been shopping with ManiMark for years. The quality and service have always been wonderful.",
+    rating: 5,
+    image: testimonialUser,
+  },
+  {
+    id: 2,
+    name: "Rahul Kumar",
+    designation: "Happy Customer",
+    review:
+      "Great products, great prices, and a really pleasant shopping experience every time.",
+    rating: 5,
+    image: testimonialUser,
+  },
+  {
+    id: 3,
+    name: "Anitha R",
+    designation: "Happy Customer",
+    review:
+      "ManiMark has become one of my favourite places to shop. The staff are always friendly and helpful.",
+    rating: 5,
+    image: testimonialUser,
+  },
+];
 
 function TimelineDot() {
   return (
@@ -181,6 +215,8 @@ export default function AboutUs() {
         </section>
       </main>
       <StatsCounter />
+      <Testimonials testimonials={testimonials} />
+      <PartnerLogos />
       <Footer />
     </>
   );
