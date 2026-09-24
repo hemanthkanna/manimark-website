@@ -19,12 +19,12 @@ const QUICK_LINKS = [
   { label: "Find a Store", to: "/store" },
   { label: "Contact Us", to: "/coming-soon" },
 ];
+
 const POLICIES = [
   { label: "Privacy Policy", to: "/privacy-policy" },
-  // "Refund Policy",
-  // "Shipping Policy",
-  { label: "Cookie Policy", to: "cookie-policy" },
+  { label: "Cookie Policy", to: "/cookie-policy" },
 ];
+
 const WHATS_NEW = [
   { label: "Deals", to: "/coming-soon" },
   { label: "New Arrivals", to: "/" },
@@ -175,7 +175,7 @@ export default function Footer() {
             <FooterList items={QUICK_LINKS} />
             <div className="mt-6">
               <FooterHeading>Policies</FooterHeading>
-              <FooterPlainList items={POLICIES} />
+              <FooterList items={POLICIES} />
             </div>
           </div>
 
