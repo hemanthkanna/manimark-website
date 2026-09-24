@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { ArrowUp, Phone, MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "919XXXXXXXXX";
-const PHONE_NUMBER = "+919XXXXXXXXX";
+const WHATSAPP_NUMBER = "917904490633";
+const PHONE_NUMBER = "+917904490633";
 
 export default function FloatingActions() {
   const [showActions, setShowActions] = useState(false);
