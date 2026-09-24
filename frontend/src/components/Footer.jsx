@@ -20,10 +20,10 @@ const QUICK_LINKS = [
   { label: "Contact Us", to: "/coming-soon" },
 ];
 const POLICIES = [
-  "Privacy Policy",
-  "Refund Policy",
-  "Shipping Policy",
-  "Terms and Condition",
+  { label: "Privacy Policy", to: "/privacy-policy" },
+  // "Refund Policy",
+  // "Shipping Policy",
+  { label: "Cookie Policy", to: "cookie-policy" },
 ];
 const WHATS_NEW = [
   { label: "Deals", to: "/coming-soon" },
@@ -107,12 +107,12 @@ function FooterPlainList({ items }) {
   return (
     <ul className="mt-3 space-y-2">
       {items.map((item) => (
-        <li key={item}>
+        <li key={item.label}>
           <a
-            href="#"
+            href={item.to}
             className="text-brand-gray transition hover:text-brand-magenta"
           >
-            {item}
+            {item.label}
           </a>
         </li>
       ))}
