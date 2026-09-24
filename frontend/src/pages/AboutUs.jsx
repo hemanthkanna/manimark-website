@@ -1,8 +1,9 @@
-import TopBar from '../components/TopBar'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import BigBrandHeading from '../components/BigBrandHeading'
-import { heroIntro, timeline, pillars, closing } from '../data/about'
+import TopBar from "../components/TopBar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import BigBrandHeading from "../components/BigBrandHeading";
+import { heroIntro, timeline, pillars, closing } from "../data/about";
+import StatsCounter from "../components/StatsCounter";
 
 function TimelineDot() {
   return (
@@ -10,7 +11,7 @@ function TimelineDot() {
       aria-hidden="true"
       className="absolute left-1/2 h-3.5 w-3.5 -translate-x-1/2 rounded-full bg-brand-yellow ring-4 ring-white"
     />
-  )
+  );
 }
 
 function BeginningSection({ entry }) {
@@ -45,7 +46,7 @@ function BeginningSection({ entry }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function NextGenSection({ entry }) {
@@ -82,16 +83,18 @@ function NextGenSection({ entry }) {
               alt={`Sketch portrait of ${person.name}`}
               className="w-32 object-contain sm:w-40"
             />
-            <p className="mt-2 text-sm font-semibold text-neutral-900">{person.name}</p>
+            <p className="mt-2 text-sm font-semibold text-neutral-900">
+              {person.name}
+            </p>
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 function PillarsSection({ pillars }) {
-  const [brands, quality] = pillars
+  const [brands, quality] = pillars;
   return (
     <div className="relative grid gap-10 py-10 md:grid-cols-2 md:gap-12 md:py-14">
       <div className="absolute top-1/2 left-6 hidden -translate-y-1/2 md:left-1/2 md:block">
@@ -101,7 +104,9 @@ function PillarsSection({ pillars }) {
         <h2 className="font-display text-xl font-semibold text-brand-magenta sm:text-2xl">
           {brands.title}
         </h2>
-        <p className="mt-3 text-[15px] leading-relaxed text-brand-gray">{brands.body}</p>
+        <p className="mt-3 text-[15px] leading-relaxed text-brand-gray">
+          {brands.body}
+        </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-6 md:justify-end">
           {brands.logos.map((logo) => (
             <img
@@ -113,11 +118,16 @@ function PillarsSection({ pillars }) {
           ))}
         </div>
       </div>
-      <div id={quality.id} className="scroll-mt-24 text-center md:pl-8 md:text-left">
+      <div
+        id={quality.id}
+        className="scroll-mt-24 text-center md:pl-8 md:text-left"
+      >
         <h2 className="font-display text-xl font-semibold text-brand-magenta sm:text-2xl">
           {quality.title}
         </h2>
-        <p className="mt-3 text-[15px] leading-relaxed text-brand-gray">{quality.body}</p>
+        <p className="mt-3 text-[15px] leading-relaxed text-brand-gray">
+          {quality.body}
+        </p>
         <ul className="mt-2 space-y-1 text-[15px] leading-relaxed text-brand-gray">
           {quality.list.map((item) => (
             <li key={item}>• {item}</li>
@@ -125,7 +135,7 @@ function PillarsSection({ pillars }) {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
 export default function AboutUs() {
@@ -135,12 +145,19 @@ export default function AboutUs() {
       <Header />
       <main className="bg-[#F5F5F7]">
         <section className="mx-auto max-w-[1200px] px-4 pt-6 text-center md:px-8">
-          <BigBrandHeading variant="gradient" className="text-[15vw] sm:text-[110px] md:text-[140px]">
+          <BigBrandHeading
+            variant="gradient"
+            className="text-[15vw] sm:text-[110px] md:text-[140px]"
+          >
             Manimark
           </BigBrandHeading>
           <div className="mx-auto -mt-4 max-w-lg sm:-mt-8">
-            <p className="font-semibold text-neutral-900">{heroIntro.eyebrow}</p>
-            <p className="mt-3 text-[15px] leading-relaxed text-brand-gray">{heroIntro.body}</p>
+            <p className="font-semibold text-neutral-900">
+              {heroIntro.eyebrow}
+            </p>
+            <p className="mt-3 text-[15px] leading-relaxed text-brand-gray">
+              {heroIntro.body}
+            </p>
           </div>
         </section>
 
@@ -163,7 +180,8 @@ export default function AboutUs() {
           </p>
         </section>
       </main>
+      <StatsCounter />
       <Footer />
     </>
-  )
+  );
 }

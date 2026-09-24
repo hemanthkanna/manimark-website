@@ -9,6 +9,7 @@ import ProductDetail from "./pages/ProductDetail";
 import ComingSoon from "./pages/ComingSoon";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
+import FloatingActions from "./components/FloatingActions";
 
 export default function App() {
   return (
@@ -29,6 +30,8 @@ export default function App() {
         {/* Any unmatched route also lands on Coming Soon rather than a blank 404 */}
         <Route path="*" element={<ComingSoon />} />
       </Routes>
+
+      <FloatingActions />
     </div>
   );
 }
