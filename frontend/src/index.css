@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap");
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 @theme {
   /* Brand palette — sampled directly from the MM-WEB-HOME-P01 PSD */

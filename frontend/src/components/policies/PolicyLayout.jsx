@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function PolicyLayout({
   title,
   description,
-  effectiveDate = "[Insert Date]",
+  effectiveDate = "[23 SEP 2026]",
   children,
 }) {
   return (
