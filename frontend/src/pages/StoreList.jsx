@@ -1,26 +1,32 @@
-import { useMemo, useState } from 'react'
-import TopBar from '../components/TopBar'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import BigBrandHeading from '../components/BigBrandHeading'
-import StoreCard from '../components/store/StoreCard'
-import storeHeroIcon from '../assets/images/store-hero-icon.png'
-import { stores, storeStates, storeCities, upcomingLocations } from '../data/stores'
+import { useMemo, useState } from "react";
+import TopBar from "../components/TopBar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import BigBrandHeading from "../components/BigBrandHeading";
+import StoreCard from "../components/store/StoreCard";
+import storeHeroIcon from "../assets/images/store-hero-icon.png";
+import {
+  stores,
+  storeStates,
+  storeCities,
+  upcomingLocations,
+} from "../data/stores";
 
-const ALL = 'All'
+const ALL = "All";
 
 export default function StoreList() {
-  const [state, setState] = useState(ALL)
-  const [city, setCity] = useState(ALL)
+  const [state, setState] = useState(ALL);
+  const [city, setCity] = useState(ALL);
 
   const filtered = useMemo(
     () =>
       stores.filter(
         (store) =>
-          (state === ALL || store.state === state) && (city === ALL || store.city === city)
+          (state === ALL || store.state === state) &&
+          (city === ALL || store.city === city),
       ),
-    [state, city]
-  )
+    [state, city],
+  );
 
   return (
     <>
@@ -40,7 +46,7 @@ export default function StoreList() {
               <img
                 src={storeHeroIcon}
                 alt="Arcot Manimark storefront illustration"
-                className="pointer-events-none absolute right-0 bottom-2 w-2/5 max-w-[220px] object-contain sm:right-4"
+                className="pointer-events-none absolute right-0 bottom-2 w-3/5 max-w-[300px] object-contain sm:right-4"
               />
             </div>
 
@@ -90,7 +96,9 @@ export default function StoreList() {
               ))}
             </div>
           ) : (
-            <p className="text-brand-gray">No stores match those filters yet.</p>
+            <p className="text-brand-gray">
+              No stores match those filters yet.
+            </p>
           )}
 
           <div className="mt-12">
@@ -110,5 +118,5 @@ export default function StoreList() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
