@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 
-export default function BulkOrderButton() {
+export default function CustomizedOrderButton() {
   return (
     <Link
-      to="/bulk-order"
+      to="/customized-order"
       className="
         inline-flex items-center gap-2
         rounded-full
@@ -22,7 +22,7 @@ export default function BulkOrderButton() {
     >
       <ShoppingCart size={18} />
 
-      <span>Bulk Order</span>
+      <span>Customized Order</span>
     </Link>
   );
 }

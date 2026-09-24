@@ -7,7 +7,7 @@ import ProductCard from "../components/product/ProductCard";
 import { categories, getCategoryBySlug } from "../data/categories";
 import { products } from "../data/products";
 import DownloadDropdown from "../components/DownloadDropdown";
-import BulkOrderButton from "../components/BulkOrderButton";
+import CustomizedOrderButton from "../components/BulkOrderButton";
 
 const SORTS = {
   recommended: { label: "Recommended", compare: null },
@@ -51,7 +51,7 @@ export default function ProductList() {
               <div className="flex flex-wrap items-center gap-3">
                 <DownloadDropdown />
 
-                <BulkOrderButton />
+                <CustomizedOrderButton />
               </div>
               {/* Only one brand exists today, so this is a forward-looking
                   placeholder rather than a functioning filter yet. */}
