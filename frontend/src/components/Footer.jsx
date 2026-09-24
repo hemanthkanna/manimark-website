@@ -202,41 +202,47 @@ export default function Footer() {
           </div>
 
           {/* Promo cards */}
-          <div className="col-span-2 flex flex-col gap-4 sm:col-span-3 sm:flex-row lg:col-span-1 lg:max-w-xs lg:flex-col">
-            <a
-              href="#"
-              className="group relative flex h-32 flex-1 items-center overflow-hidden rounded-2xl bg-brand-magenta px-5"
-            >
-              <span className="font-display relative z-10 text-2xl font-semibold text-white uppercase">
-                E-Broch
-              </span>
-              <img
-                src={ebrochPhoto}
-                alt="Download the Arcot Manimark e-brochure"
-                className="absolute inset-y-0 right-0 h-full w-auto object-cover opacity-90 transition group-hover:opacity-100"
-              />
-            </a>
-            <button
-              type="button"
-              onClick={() => setIsChatOpen(true)}
-              className="group relative flex h-32 flex-1 items-center overflow-hidden rounded-2xl bg-[#3CB54A] px-5 text-left"
-            >
-              <span className="font-display relative z-10 text-3xl font-semibold text-white">
-                Hi
-              </span>
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+            <div className="flex flex-col gap-4 sm:flex-row lg:flex-col">
+              {/* E-Brochure */}
+              <a
+                href="#"
+                className="group relative flex min-h-[120px] flex-1 items-center overflow-hidden rounded-2xl bg-brand-magenta px-5 py-4 sm:h-32"
+              >
+                <span className="font-display relative z-10 text-2xl font-semibold uppercase text-white">
+                  E-Broch
+                </span>
 
-              <img
-                src={chatBg}
-                alt="Chat with Arcot Manimark support on WhatsApp"
-                className="absolute inset-y-0 right-0 h-full w-auto object-cover"
-              />
+                <img
+                  src={ebrochPhoto}
+                  alt="Download the Arcot Manimark e-brochure"
+                  className="absolute right-0 top-0 h-full w-auto max-w-[65%] object-cover opacity-90 transition group-hover:opacity-100"
+                />
+              </a>
 
-              <img
-                src={whatsappIcon}
-                alt=""
-                className="absolute bottom-4 left-14 h-6 w-6 object-contain"
-              />
-            </button>
+              {/* WhatsApp */}
+              <button
+                type="button"
+                onClick={() => setIsChatOpen(true)}
+                className="group relative flex min-h-[120px] flex-1 items-center overflow-hidden rounded-2xl bg-[#3CB54A] px-5 py-4 text-left sm:h-32"
+              >
+                <span className="font-display relative z-10 text-3xl font-semibold text-white">
+                  Hi
+                </span>
+
+                <img
+                  src={chatBg}
+                  alt=""
+                  className="absolute right-0 top-0 h-full w-auto max-w-[65%] object-cover"
+                />
+
+                <img
+                  src={whatsappIcon}
+                  alt=""
+                  className="absolute bottom-4 left-14 z-10 h-6 w-6 object-contain"
+                />
+              </button>
+            </div>
 
             {/* Chatbot */}
             <ChatBot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
