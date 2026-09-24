@@ -1,9 +1,9 @@
-import curlySwirl from "../assets/images/curly-swirl.png";
-import girlProduct from "../assets/images/girl-product.png";
-import storeIllustration from "../assets/images/store-illustration.png";
-import shopNowMascot from "../assets/images/shop-now-mascot.png";
-import starBurst from "../assets/images/star-burst-bg.png";
-import StarIcon from "./StarIcon";
+import curlySwirl from '../assets/images/curly-swirl.png'
+import girlProduct from '../assets/images/girl-product.png'
+import storeIllustration from '../assets/images/store-illustration.png'
+import shopNowMascot from '../assets/images/shop-now-mascot.png'
+import starBurst from '../assets/images/star-burst-bg.png'
+import StarIcon from './StarIcon'
 
 function NewArrivalsCard() {
   return (
@@ -32,7 +32,7 @@ function NewArrivalsCard() {
         </button>
       </div>
     </div>
-  );
+  )
 }
 
 function FindOutletCard() {
@@ -49,7 +49,7 @@ function FindOutletCard() {
         className="pointer-events-none absolute -bottom-2 -left-4 h-[55%] w-auto object-contain sm:h-[62%]"
       />
     </div>
-  );
+  )
 }
 
 function ShopNowCard() {
@@ -74,7 +74,7 @@ function ShopNowCard() {
         </button>
       </div>
     </div>
-  );
+  )
 }
 
 function ReviewCard() {
@@ -96,14 +96,14 @@ function ReviewCard() {
         ))}
       </div>
       <p className="relative z-10 mt-3 max-w-md text-[15px] leading-relaxed text-neutral-900">
-        Very tasty groundnut specialities made from selective nuts and jaggery.
-        Now they have introduced many more varities of sweets using groundnut.
+        Very tasty groundnut specialities made from selective nuts and jaggery. Now
+        they have introduced many more varities of sweets using groundnut.
       </p>
       <p className="relative z-10 mt-3 text-sm font-semibold text-neutral-900">
         immanuel rajaiah (Google Reviewer)
       </p>
     </div>
-  );
+  )
 }
 
 export default function PromoGrid() {
@@ -122,5 +122,5 @@ export default function PromoGrid() {
         </div>
       </div>
     </section>
-  );
+  )
 }

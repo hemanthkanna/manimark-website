@@ -1,22 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap");
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 @theme {
   /* Brand palette — sampled directly from the MM-WEB-HOME-P01 PSD */
-  --color-brand-magenta: #E23AA6;
-  --color-brand-magenta-dark: #C41687;
-  --color-brand-yellow: #FFD705;
-  --color-brand-yellow-light: #F6EA48;
-  --color-brand-teal: #3DC3CF;
-  --color-brand-teal-light: #B0E2E8;
-  --color-brand-pink-soft: #FCEBF6;
-  --color-brand-pink-card: #FE7FC3;
-  --color-brand-review-yellow: #FFDB1E;
-  --color-brand-orange: #F0720C;
-  --color-brand-gray: #6B6B6B;
+  --color-brand-magenta: #e23aa6;
+  --color-brand-magenta-dark: #c41687;
+  --color-brand-yellow: #ffd705;
+  --color-brand-yellow-light: #f6ea48;
+  --color-brand-teal: #3dc3cf;
+  --color-brand-teal-light: #b0e2e8;
+  --color-brand-pink-soft: #fcebf6;
+  --color-brand-pink-card: #fe7fc3;
+  --color-brand-review-yellow: #ffdb1e;
+  --color-brand-orange: #f0720c;
+  --color-brand-gray: #6b6b6b;
 
-  --font-display: 'Fredoka', ui-sans-serif, system-ui, sans-serif;
-  --font-body: 'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-partner-marquee: partner-marquee 30s linear infinite;
 }
 
 @layer base {
@@ -24,7 +27,21 @@
     font-family: var(--font-body);
     color: #1f1f1f;
   }
-  h1, h2, h3, h4, .font-display {
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
     font-family: var(--font-display);
+  }
+}
+
+@keyframes partner-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }
