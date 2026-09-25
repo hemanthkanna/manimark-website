@@ -37,15 +37,13 @@ const BROWSE_CATEGORIES = categories.map((c) => ({
 const POPULAR_PRODUCT_IDS = [
   "peanut-burfi",
   "fine-peanut-burfi",
-  "kamarkat",
   "coconut-balls",
-  "sesame-balls",
   "energy-laddu",
-  "masala-peanut",
 ];
+
 const POPULAR_PRODUCTS = POPULAR_PRODUCT_IDS.map((id) => {
   const product = products.find((p) => p.id === id);
-  return { label: product.name, to: `/product/${product.id}` };
+  return { label: product.name.toLowerCase(), to: `/product/${product.id}` };
 });
 const DISCOVER_MANIMARK = [
   { label: "Quality & Hygiene", to: "/about-us#quality-hygiene" },
@@ -59,24 +57,33 @@ const SOCIALS = [
   {
     src: socialPinterest,
     label: "Pinterest",
-    link: "https://www.youtube.com/channel/UC3h-J8j4uvtQGJd_Lz8lxOw",
+    link: "https://in.pinterest.com/arcotmanimarkfoodspvtltd/",
   },
   {
     src: socialInstagram,
     label: "Instagram",
-    link: "https://www.instagram.com/arcotmanimark_official/",
+    link: "https://www.instagram.com/arcotmanimark_official",
   },
   {
     src: socialFacebook,
     label: "Facebook",
-    link: "https://www.facebook.com/Manimarksnacks/",
+    link: "https://www.facebook.com/Manimarkfoodspvtltd/",
   },
   {
     src: socialYoutube,
     label: "YouTube",
-    link: "https://www.youtube.com/channel/UC3h-J8j4uvtQGJd_Lz8lxOw",
+    link: "https://www.youtube.com/@arcotmanimarkfoodspvtltd",
   },
-  { src: socialQuora, label: "Quora", link: "https://www.quora.com" },
+  {
+    src: null,
+    label: "Reddit",
+    link: "https://www.reddit.com/user/Manimarkfoodpvtltd/",
+  },
+  {
+    src: socialQuora,
+    label: "Quora",
+    link: "https://www.quora.com/profile/Arcot-Manimark-Foods-Pvt-Ltd",
+  },
 ];
 
 function FooterHeading({ children }) {
@@ -133,25 +140,34 @@ export default function Footer() {
               Arcot Manimark Foods PVT. LTD.
             </p>
             <p className="mt-2 leading-relaxed text-brand-gray">
-              S.F,No:870/5, Narayanapuram Village,
+              S.F. No. 870/5, Narayanapuram Village,
               <br />
               Kannamangalam Road, Kavanoor Post,
               <br />
-              Arcot Thaluk, Ranipet Dis, Tamilnadu,
+              Arcot Taluk, Ranipet District,
               <br />
-              Ranipet, Tamil Nadu - 632507
+              Tamil Nadu – 632507.
             </p>
             <p className="mt-4 leading-relaxed text-brand-gray">
-              7904490146 / 7904490633
+              <a
+                href="tel:+91 79044 89576"
+                className="hover:text-brand-magenta"
+              >
+                +91 79044 89576
+              </a>
               <br />
-              customercare@manimark.com
+              <a
+                href="mailto:customercare@manimark.com"
+                className="hover:text-brand-magenta"
+              >
+                customercare@manimark.com
+              </a>
             </p>
             <p className="mt-4 leading-relaxed text-brand-gray">
               © 2026 Arcot Manimark Foods |
               <br />
               All Rights Reserved |
               <br />
-              Website Design by Regin Designs
             </p>
             <div className="mt-5 flex items-center gap-3">
               {SOCIALS.map(({ src, label, link }) => (
@@ -168,7 +184,6 @@ export default function Footer() {
               ))}
             </div>
           </div>
-
           {/* Quick Links + Policies */}
           <div>
             <FooterHeading>Quick Links</FooterHeading>
@@ -178,7 +193,6 @@ export default function Footer() {
               <FooterList items={POLICIES} />
             </div>
           </div>
-
           {/* What's New + Browse Categories */}
           <div>
             <FooterHeading>What&apos;s New</FooterHeading>
@@ -188,19 +202,16 @@ export default function Footer() {
               <FooterList items={BROWSE_CATEGORIES} />
             </div>
           </div>
-
           {/* Popular Products */}
           <div>
             <FooterHeading>Popular Products</FooterHeading>
             <FooterList items={POPULAR_PRODUCTS} />
           </div>
-
           {/* Discover Manimark */}
           <div>
             <FooterHeading>Discover Manimark</FooterHeading>
             <FooterList items={DISCOVER_MANIMARK} />
           </div>
-
           {/* Promo cards */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <div className="flex flex-col gap-4 sm:flex-row lg:flex-col">

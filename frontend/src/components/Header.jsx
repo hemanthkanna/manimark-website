@@ -21,7 +21,7 @@ const NAV_LINKS = [
 // categories (its "New Arraivals" label is a typo, corrected here; "Oil"
 // there is shown plural elsewhere, kept plural for consistency).
 const PRODUCT_MENU = [
-  { label: "New Arrivals", to: "/" },
+  { label: "New Arrivals", to: "/products" },
   ...categories.map((c) => ({ label: c.name, to: `/products/${c.slug}` })),
 ];
 

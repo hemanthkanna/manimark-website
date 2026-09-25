@@ -1,21 +1,21 @@
-import { Link, useParams } from 'react-router-dom'
-import TopBar from '../components/TopBar'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Breadcrumb from '../components/Breadcrumb'
-import RatingStars from '../components/RatingStars'
-import StoreCard from '../components/store/StoreCard'
-import { getStoreById, stores } from '../data/stores'
+import { Link, useParams } from "react-router-dom";
+import TopBar from "../components/TopBar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Breadcrumb from "../components/Breadcrumb";
+import RatingStars from "../components/RatingStars";
+import StoreCard from "../components/store/StoreCard";
+import { getStoreById, stores } from "../data/stores";
 
-const dateFormatter = new Intl.DateTimeFormat('en-IN', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-})
+const dateFormatter = new Intl.DateTimeFormat("en-IN", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
 
 export default function StoreDetail() {
-  const { storeId } = useParams()
-  const store = getStoreById(storeId)
+  const { storeId } = useParams();
+  const store = getStoreById(storeId);
 
   if (!store) {
     return (
@@ -23,8 +23,12 @@ export default function StoreDetail() {
         <TopBar />
         <Header />
         <main className="mx-auto max-w-[1366px] px-4 py-20 text-center md:px-8">
-          <p className="text-lg font-semibold text-neutral-900">Store not found</p>
-          <p className="mt-2 text-brand-gray">This store may have moved or isn&apos;t open yet.</p>
+          <p className="text-lg font-semibold text-neutral-900">
+            Store not found
+          </p>
+          <p className="mt-2 text-brand-gray">
+            This store may have moved or isn&apos;t open yet.
+          </p>
           <Link
             to="/store"
             className="mt-6 inline-block rounded-full bg-brand-yellow px-6 py-2.5 text-sm font-semibold text-neutral-900"
@@ -34,11 +38,11 @@ export default function StoreDetail() {
         </main>
         <Footer />
       </>
-    )
+    );
   }
 
-  const otherStores = stores.filter((s) => s.id !== store.id)
-  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.mapQuery)}`
+  const otherStores = stores.filter((s) => s.id !== store.id);
+  const mapsHref = store.mapUrl;
 
   return (
     <>
@@ -48,15 +52,19 @@ export default function StoreDetail() {
         <section className="mx-auto max-w-[1366px] px-4 pt-8 pb-16 md:px-8">
           <Breadcrumb
             items={[
-              { label: 'Home', to: '/' },
-              { label: 'Find a Store', to: '/store' },
+              { label: "Home", to: "/" },
+              { label: "Find a Store", to: "/store" },
               { label: store.name },
             ]}
           />
 
           <div className="mt-6 grid gap-8 md:grid-cols-2 md:gap-12">
             <div className="overflow-hidden rounded-[24px]">
-              <img src={store.photo} alt={`${store.name} store front`} className="h-full w-full object-cover" />
+              <img
+                src={store.photo}
+                alt={`${store.name} store front`}
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="flex flex-col justify-center">
               <h1 className="font-display text-3xl font-semibold text-neutral-900 sm:text-4xl">
@@ -94,5 +102,5 @@ export default function StoreDetail() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

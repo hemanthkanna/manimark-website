@@ -1,11 +1,14 @@
-import curlySwirl from '../assets/images/curly-swirl.png'
-import girlProduct from '../assets/images/girl-product.png'
-import storeIllustration from '../assets/images/store-illustration.png'
-import shopNowMascot from '../assets/images/shop-now-mascot.png'
-import starBurst from '../assets/images/star-burst-bg.png'
-import StarIcon from './StarIcon'
+import curlySwirl from "../assets/images/curly-swirl.png";
+import girlProduct from "../assets/images/girl-product.png";
+import storeIllustration from "../assets/images/store-illustration.png";
+import shopNowMascot from "../assets/images/shop-now-mascot.png";
+import starBurst from "../assets/images/star-burst-bg.png";
+import StarIcon from "./StarIcon";
+import { useNavigate } from "react-router-dom";
 
 function NewArrivalsCard() {
+  const navigate = useNavigate();
+
   return (
     <div className="relative flex h-full min-h-[520px] flex-col overflow-hidden rounded-[28px] bg-brand-yellow-light md:min-h-full">
       <img
@@ -27,12 +30,13 @@ function NewArrivalsCard() {
         <button
           type="button"
           className="rounded-full bg-brand-orange px-6 py-2.5 text-sm font-semibold text-white transition hover:brightness-110 cursor-pointer"
+          onClick={() => navigate("/products")}
         >
           View more
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 function FindOutletCard() {
@@ -49,10 +53,12 @@ function FindOutletCard() {
         className="pointer-events-none absolute -bottom-2 -left-4 h-[55%] w-auto object-contain sm:h-[62%]"
       />
     </div>
-  )
+  );
 }
 
 function ShopNowCard() {
+  const navigate = useNavigate();
+
   return (
     <div className="relative flex h-full min-h-[220px] flex-col justify-center overflow-hidden rounded-[28px] bg-brand-pink-card p-5 sm:min-h-[260px] sm:p-8">
       <img
@@ -69,12 +75,13 @@ function ShopNowCard() {
         <button
           type="button"
           className="mt-4 w-fit rounded-full bg-brand-yellow px-6 py-2.5 text-sm font-semibold text-neutral-900 transition hover:brightness-105 cursor-pointer"
+          onClick={() => navigate("/products")}
         >
           Products
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 function ReviewCard() {
@@ -96,14 +103,14 @@ function ReviewCard() {
         ))}
       </div>
       <p className="relative z-10 mt-3 max-w-md text-[15px] leading-relaxed text-neutral-900">
-        Very tasty groundnut specialities made from selective nuts and jaggery. Now
-        they have introduced many more varities of sweets using groundnut.
+        Very tasty groundnut specialities made from selective nuts and jaggery.
+        Now they have introduced many more varities of sweets using groundnut.
       </p>
       <p className="relative z-10 mt-3 text-sm font-semibold text-neutral-900">
         immanuel rajaiah (Google Reviewer)
       </p>
     </div>
-  )
+  );
 }
 
 export default function PromoGrid() {
@@ -122,5 +129,5 @@ export default function PromoGrid() {
         </div>
       </div>
     </section>
-  )
+  );
 }

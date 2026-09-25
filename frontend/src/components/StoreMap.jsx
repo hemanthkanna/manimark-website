@@ -111,9 +111,7 @@ export default function StoreMap({
                   )}
 
                   <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                      store.mapQuery,
-                    )}`}
+                    href={store.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
