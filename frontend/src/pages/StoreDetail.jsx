@@ -63,7 +63,7 @@ export default function StoreDetail() {
               <img
                 src={store.photo}
                 alt={`${store.name} store front`}
-                className="h-full w-full object-cover"
+                className="h-100 w-full object-cover"
               />
             </div>
             <div className="flex flex-col justify-center">

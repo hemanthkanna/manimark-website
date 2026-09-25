@@ -8,6 +8,7 @@ import socialInstagram from "../assets/images/social-instagram.png";
 import socialFacebook from "../assets/images/social-facebook.png";
 import socialYoutube from "../assets/images/social-youtube.png";
 import socialQuora from "../assets/images/social-quora.png";
+import socialReddit from "../assets/images/social-reddit.png";
 import ChatBot from "./ChatBot";
 import { categories } from "../data/categories";
 import { products } from "../data/products";
@@ -75,7 +76,7 @@ const SOCIALS = [
     link: "https://www.youtube.com/@arcotmanimarkfoodspvtltd",
   },
   {
-    src: null,
+    src: socialReddit,
     label: "Reddit",
     link: "https://www.reddit.com/user/Manimarkfoodpvtltd/",
   },
