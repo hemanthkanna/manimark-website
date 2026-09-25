@@ -51,9 +51,10 @@ export const stores = [
     address:
       "No :96, North usman road, Opp to Malabar Gold, T-Nagar, Chennai-600017",
     contactNumber: "9884642555",
-    mapUrl: "https://maps.app.goo.gl/FENqXv8XSnzP6o3g6",
+    mapUrl:
+      "https://www.google.com/maps/place/13%C2%B002'52.7%22N+80%C2%B013'59.9%22E/@13.0479655,80.2307401,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.0479655!4d80.233315?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 13.0479655,
-    longitude: 80.2307401,
+    longitude: 80.233315,
     photo: tNagarPhoto,
   },
   {
@@ -66,9 +67,10 @@ export const stores = [
     address:
       "No :38 & 39, CP Ramasamy Road, Alwarpet, Next to Naturals Spa , Chennai-600018",
     contactNumber: "9095206636",
-    mapUrl: "https://maps.app.goo.gl/ZJREpNDFfeST3aiQ8",
+    mapUrl:
+      "https://www.google.com/maps/place/13%C2%B001'56.9%22N+80%C2%B015'24.7%22E/@13.0324608,80.2542764,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.0324608!4d80.2568513?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 13.0324608,
-    longitude: 80.2542764,
+    longitude: 80.2568513,
     photo: alwarpetPhoto,
   },
   {
@@ -81,9 +83,10 @@ export const stores = [
     address:
       "No : 33, B-3 VGP Srinivasanaga, Rajakilpakkam, EastTambaram- Chennai- 600073",
     contactNumber: "9944296256",
-    mapUrl: "https://maps.app.goo.gl/MjHKHEvD283FnkJR7",
+    mapUrl:
+      "https://www.google.com/maps/place/12%C2%B054'49.5%22N+80%C2%B009'19.7%22E/@12.91376,80.1528947,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.91376!4d80.1554696?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.91376,
-    longitude: 80.1528947,
+    longitude: 80.1554696,
     photo: rajakilpakkamPhoto,
   },
   {
@@ -95,9 +98,10 @@ export const stores = [
     rating: 4.7,
     address: "No : 2,G-Block Municipal office, Ambapuram, Gudiyatham-632602",
     contactNumber: "9884642555",
-    mapUrl: "https://maps.app.goo.gl/EDzFdr1HvResnfpbA",
+    mapUrl:
+      "https://www.google.com/maps/place/12%C2%B056'41.1%22N+78%C2%B052'11.9%22E/@12.9447536,78.8673821,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.9447536!4d78.869957?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.9447536,
-    longitude: 78.8673821,
+    longitude: 78.869957,
     photo: gudiyathamPhoto,
   },
   {
@@ -112,7 +116,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B043'43.7%22N+77%C2%B048'36.8%22E/@12.7288059,77.8076445,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.7288059!4d77.8102194?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.7288059,
-    longitude: 77.8076445,
+    longitude: 77.8102194,
     photo: hosurPhoto,
   },
   {
@@ -127,7 +131,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B044'45.4%22N+77%C2%B048'55.4%22E/@12.7459346,77.8127996,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.7459346!4d77.8153745?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.7459346,
-    longitude: 77.8127996,
+    longitude: 77.8153745,
     photo: hosurTwoPhoto,
   },
   {
@@ -157,7 +161,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/11%C2%B020'00.8%22N+77%C2%B042'15.5%22E/@11.3335477,77.7017211,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.3335477!4d77.704296?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 11.3335477,
-    longitude: 77.7017211,
+    longitude: 77.704296,
     photo: erodePhoto,
   },
   {
@@ -172,7 +176,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/11%C2%B001'22.7%22N+76%C2%B056'51.6%22E/@11.0229647,76.9450866,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.0229647!4d76.9476615?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 11.0229647,
-    longitude: 76.9450866,
+    longitude: 76.9476615,
     photo: coimbatorePhoto,
   },
   {
@@ -220,7 +224,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B055'22.6%22N+80%C2%B007'43.4%22E/@12.9229314,80.126136,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.9229314!4d80.1287109?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.9229314,
-    longitude: 80.126136,
+    longitude: 80.1287109,
     photo: tambaramPhoto,
   },
   {
@@ -236,7 +240,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/13%C2%B008'10.8%22N+79%C2%B054'30.1%22E/@13.1363278,79.9057929,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.1363278!4d79.9083678?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 13.1363278,
-    longitude: 79.9057929,
+    longitude: 79.9083678,
     photo: thiruvallurPhoto,
   },
   {
@@ -252,7 +256,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/10%C2%B047'51.4%22N+78%C2%B045'12.2%22E/@10.7976234,78.7508078,17z/data=!3m1!4b1!4m4!3m3!8m2!3d10.7976234!4d78.7533827?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 10.7976234,
-    longitude: 78.7508078,
+    longitude: 78.7533827,
     photo: trichyPhoto,
   },
   {
@@ -268,7 +272,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/8%C2%B010'45.7%22N+77%C2%B025'18.5%22E/@8.1793606,77.4192349,17z/data=!3m1!4b1!4m4!3m3!8m2!3d8.1793606!4d77.4218098?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 8.1793606,
-    longitude: 77.4192349,
+    longitude: 77.4218098,
     photo: nagercoilPhoto,
   },
   {
@@ -284,7 +288,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B056'06.5%22N+79%C2%B009'16.6%22E/@12.9351268,79.1520348,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.9351268!4d79.1546097?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.9351268,
-    longitude: 79.1520348,
+    longitude: 79.1546097,
     photo: sathuvachariPhoto,
   },
   {
@@ -300,7 +304,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B051'43.5%22N+79%C2%B016'36.7%22E/@12.862087,79.2742817,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.862087!4d79.2768566?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.862087,
-    longitude: 79.2742817,
+    longitude: 79.2768566,
     photo: companyOutletPhoto,
   },
   {
@@ -316,7 +320,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B040'54.9%22N+79%C2%B059'19.2%22E/@12.6819237,79.9860977,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.6819237!4d79.9886726?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.6819237,
-    longitude: 79.9860977,
+    longitude: 79.9886726,
     photo: vaniyambadiPhoto,
   },
   {
@@ -331,7 +335,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B013'49.5%22N+79%C2%B004'21.5%22E/@12.2304276,79.0700671,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.2304276!4d79.072642?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.2304276,
-    longitude: 79.0700671,
+    longitude: 79.072642,
     photo: thiruvannamalaiPhoto,
   },
   {
@@ -347,7 +351,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/11%C2%B000'03.0%22N+77%C2%B001'53.2%22E/@11.0008272,77.0288637,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.0008272!4d77.0314386?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 11.0008272,
-    longitude: 77.0288637,
+    longitude: 77.0314386,
     photo: coimbatoreSinganallurPhoto,
   },
   {
@@ -363,7 +367,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B049'32.7%22N+79%C2%B042'06.5%22E/@12.8257615,79.6992372,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.8257615!4d79.7018121?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.8257615,
-    longitude: 79.6992372,
+    longitude: 79.7018121,
     photo: kanchipuramPhoto,
   },
   {
@@ -378,7 +382,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/13%C2%B007'11.3%22N+80%C2%B017'09.1%22E/@13.1198073,80.2832743,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.1198073!4d80.2858492?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 13.1198073,
-    longitude: 80.2832743,
+    longitude: 80.2858492,
     photo: oldWashermenpetPhoto,
   },
   {
@@ -410,7 +414,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/10%C2%B057'38.4%22N+78%C2%B004'04.2%22E/@10.9606663,78.0652483,17z/data=!3m1!4b1!4m4!3m3!8m2!3d10.9606663!4d78.0678232?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 10.9606663,
-    longitude: 78.0652483,
+    longitude: 78.0678232,
     photo: karurPhoto,
   },
   {
@@ -425,7 +429,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/13%C2%B037'59.4%22N+79%C2%B024'56.7%22E/@13.6331674,79.4131665,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.6331674!4d79.4157414?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwOC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 13.6331674,
-    longitude: 79.4131665,
+    longitude: 79.4157414,
     photo: thirupatiPhoto,
   },
   {
@@ -441,7 +445,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/11%C2%B012'40.0%22N+78%C2%B010'03.2%22E/@11.2111172,78.1649916,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.2111172!4d78.1675665?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwOC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 11.2111172,
-    longitude: 78.1649916,
+    longitude: 78.1675665,
     photo: namakkalPhoto,
   },
   {
@@ -456,13 +460,13 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/10%C2%B021'43.3%22N+77%C2%B058'30.5%22E/@10.3620225,77.9725612,17z/data=!3m1!4b1!4m4!3m3!8m2!3d10.3620225!4d77.9751361?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwOC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 10.3620225,
-    longitude: 77.9725612,
+    longitude: 77.9751361,
     photo: dindigulPhoto,
   },
   {
     id: "pondychery",
     name: "SDK ENTERPRISES 1",
-    city: "Pondychery",
+    city: "Pondicherry",
     state: "Puducherry",
     openingDate: "2024-05-25",
     rating: 4.7,
@@ -476,7 +480,7 @@ export const stores = [
   {
     id: "pondychery-2",
     name: "SDK ENTERPRISES 2",
-    city: "Pondychery",
+    city: "Pondicherry",
     state: "Puducherry",
     openingDate: "2024-05-25",
     rating: 4.7,
@@ -500,7 +504,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/12%C2%B040'55.0%22N+79%C2%B059'19.3%22E/@12.6819464,79.986116,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.6819464!4d79.9886909?hl=en&entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 12.6819464,
-    longitude: 79.986116,
+    longitude: 79.9886909,
     photo: chengalpattuPhoto,
   },
   {
@@ -557,8 +561,8 @@ export const stores = [
     contactNumber: "7904490633",
     mapUrl:
       "https://www.google.com/maps/place/13%C2%B005'41.2%22N+80%C2%B012'12.7%22E/@13.1163142,80.1936481,13.75z/data=!4m4!3m3!8m2!3d13.0947853!4d80.2035304?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
-    latitude: 13.1163142,
-    longitude: 80.1936481,
+    latitude: 13.0947853,
+    longitude: 80.2035304,
     photo: null,
   },
   {
@@ -574,7 +578,7 @@ export const stores = [
     mapUrl:
       "https://www.google.com/maps/place/14%C2%B002'47.9%22N+78%C2%B044'54.7%22E/@14.0466349,78.7459386,17z/data=!3m1!4b1!4m4!3m3!8m2!3d14.0466349!4d78.7485135?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
     latitude: 14.0466349,
-    longitude: 78.7459386,
+    longitude: 78.7485135,
     photo: rayachotyPhoto,
   },
   {
@@ -587,7 +591,7 @@ export const stores = [
     address: "NO-44 GROUND FLOOR SAMPHANGHI LODGE MC ROAD AMBUR -635802",
     contactNumber: "9944023450",
     mapUrl:
-      "https://www.google.com/maps/place/14%C2%B002'47.9%22N+78%C2%B044'54.7%22E/@14.0466349,78.7459386,17z/data=!3m1!4b1!4m4!3m3!8m2!3d14.0466349!4d78.7485135?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
+      "https://www.google.com/maps/search/?api=1&query=NO-44%20GROUND%20FLOOR%20SAMPHANGHI%20LODGE%20MC%20ROAD%20AMBUR%20-635802%2C%20Ambur%2C%20Tamil%20Nadu%20635802",
     latitude: 14.0466349,
     longitude: 78.7459386,
     photo: null,
@@ -603,8 +607,8 @@ export const stores = [
     contactNumber: "9443529712",
     mapUrl:
       "https://www.google.com/maps/dir//Ragavendrapuram,+VM4Q%2BHQC,+Raghavendra+Puram+Rd,+Sriramapuram,+Srirangam,+Tiruchirappalli,+Tamil+Nadu+620006/@13.1769175,79.8811918,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3baaf5e17dc99b0d:0x2d2cc75829d8f1ee!2m2!1d78.6894043!2d10.8564376?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
-    latitude: 13.1769175,
-    longitude: 79.8811918,
+    latitude: 10.8564376,
+    longitude: 78.6894043,
     photo: srirangamPhoto,
   },
 ];
@@ -635,7 +639,7 @@ export const storeCities = [
   "Namakkal",
   "Nanganallur",
   "Navalur",
-  "Pondychery",
+  "Pondicherry",
   "Rajakilpakkam",
   "Rayachoty",
   "Salem",
